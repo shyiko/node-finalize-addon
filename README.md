@@ -1,4 +1,4 @@
-# node-finalize-addon [![Build Status](https://travis-ci.org/shyiko/node-finalize-addon.svg?branch=master)](https://travis-ci.org/shyiko/node-finalize-addon) [![npm](https://img.shields.io/npm/v/node-finalize-addon.svg)](https://www.npmjs.com/package/node-finalize-addon)
+# node-finalize-addon [![Build Status](https://travis-ci.org/shyiko/node-finalize-addon.svg?branch=master)](https://travis-ci.org/shyiko/node-finalize-addon) [![npm](https://img.shields.io/npm/v/finalize-addon.svg)](https://www.npmjs.com/package/finalize-addon)
 
 Object [finalization](https://en.wikipedia.org/wiki/Finalizer) based on [N-API](https://nodejs.org/api/n-api.html) for Node.js v8.6.0+.  
 In a nutshell, it allows you to register a callback which will be executed when/if 
