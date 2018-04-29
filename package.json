@@ -1,0 +1,35 @@
+{
+  "name": "finalize-addon",
+  "description": "Object finalization based on N-API for Node.js v8.6.0+",
+  "version": "0.1.0",
+  "author": "Stanley Shyiko <stanley.shyiko@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shyiko/node-finalize-addon"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard *.js test/*.js",
+    "lint-fix": "standard --fix *.js test/*.js",
+    "test": "node-gyp rebuild && node --expose-gc --no-warnings index.test.js",
+    "release": "yarn lint && yarn test && yarn version && npm publish"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "standard": "^8.6.0"
+  },
+  "pre-commit": "lint",
+  "engines": {
+    "node": ">=8.6.0",
+    "yarn": ">=1.0.0"
+  },
+  "standard": {
+    "globals": ["gc"]
+  },
+  "keywords": [
+    "n-api",
+    "weak",
+    "finalize"
+  ]
+}
