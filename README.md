@@ -14,11 +14,19 @@ npm install finalize-addon
 
 ```javascript
 const finalize = require('finalize-addon')
-
-const obj = ...
-finalize(obj, () => {
+const finalizeCallback = () => {
   // warn if fd/sockets are left open, etc
-})
+}
+
+function main () {
+  const obj = ...
+  finalize(obj, finalizeCallback)
+}
+
+main()
+// obj is now eligible for garbage collection 
+// (un-comment line below to force gc to run (requires `node --expose-gc`))
+// gc() 
 ```
 
 > `require`ing N-API addon in Node.js < v10.0.0 results in `Warning: N-API is an experimental feature and could change at any time.`. 
